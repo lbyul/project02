@@ -482,14 +482,16 @@ input::placeholder {
         display: block;
         text-align: right;
     }
-
+    .footer-menu li {
+        margin-bottom: 16px;
+    }
+    .footer-menu li:last-child {
+        margin-bottom: 0;
+    }
     .footer-menu li a {
         font-size: 0.875rem;
         color: #767676;
         margin-bottom: 16px;
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-        white-space : nowrap
+        white-space : nowrap;
     }
 }
