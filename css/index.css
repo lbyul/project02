@@ -49,6 +49,17 @@
     font-weight: 700;
     height: 50px;
 }
+[class$="btn"]:hover {
+    color: var(--main-color);
+    transition: all 0.1s linear;
+}
+.download-btn:hover {
+    background-color: #fff;
+}
+.more-btn:hover,
+.submit-btn:hover {
+    background-color: #F2E9D8;
+}
 
 /* Main */
 #hoduMain .sec01 {
