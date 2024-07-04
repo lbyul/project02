@@ -104,6 +104,14 @@
             </div>
             <img src="./img/img_5.png" alt="">
         </section>
+        <div class="modal">
+            <div class="modal-container">
+                <img class="modal-hodu-img" src="./img/modal-cat.png" alt="볼빨간 HODU 얼굴">
+                <p class="modal-txt01">Thank you!</p>
+                <p class="modal-txt02">Lorem Ipsum is simply dummy text of the printing industry.</p>
+                <button type="button" class="close-btn">OK! I Love HODU</button>
+            </div>
+        </div>
     </main>
     <!-- Main Edn -->
     <!-- Footer Start -->
@@ -132,25 +140,37 @@
 
 <script>
     document.addEventListener('DOMContentLoaded', function() {
-    const slider = document.querySelector('.slider');
-    let startX;
-    let scrollLeft;
+        const slider = document.querySelector('.slider');
+        let startX;
+        let scrollLeft;
 
-    slider.addEventListener('touchstart', (e) => {
-        startX = e.touches[0].pageX - slider.offsetLeft;
-        scrollLeft = slider.scrollLeft;
+        slider.addEventListener('touchstart', (e) => {
+            startX = e.touches[0].pageX - slider.offsetLeft;
+            scrollLeft = slider.scrollLeft;
+        });
+
+        slider.addEventListener('touchmove', (e) => {
+            if(!startX) return;
+            const x = e.touches[0].pageX - slider.offsetLeft;
+            const walk = (x - startX) * 2; // 스크롤 속도 조절
+            slider.scrollLeft = scrollLeft - walk;
+        });
+
+        slider.addEventListener('touchend', () => {
+            startX = null;
+        });
     });
 
-    slider.addEventListener('touchmove', (e) => {
-        if(!startX) return;
-        const x = e.touches[0].pageX - slider.offsetLeft;
-        const walk = (x - startX) * 2; // 스크롤 속도 조절
-        slider.scrollLeft = scrollLeft - walk;
-    });
+    /* modal */
+    const modal = document.querySelector('.modal');
+        const modalOpen = document.querySelector('.submit-btn');
+        const modalClose = document.querySelector('.close-btn');
 
-    slider.addEventListener('touchend', () => {
-        startX = null;
-    });
-});
+        modalOpen.addEventListener('click',function(){
+            modal.classList.add('on');
+        });
+        modalClose.addEventListener('click',function(){
+            modal.classList.remove('on');
+        });
 </script>
 </html>

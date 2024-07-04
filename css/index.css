@@ -230,6 +230,51 @@ input::placeholder {
     color: #767676;
 }
 
+/* modal */
+.modal {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: rgba(0, 0, 0, 0.6);
+    display: none;
+}
+.modal.on {
+    display: block;
+}
+.modal-container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    width: 600px;
+    height: 400px;
+    background: url(../img/modal-bg.png) no-repeat;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    border-radius: 30px;
+
+}
+.modal-hodu-img {
+    width: 110px;
+    height: 112px;
+}
+.modal-txt01 {
+    margin: 24px 0 12px 0;
+    font-size: 2.25rem;
+    font-weight: 700;
+    color: #D97652;
+}
+.modal-txt02 {
+    font-size: 0.875rem;
+    margin-bottom: 38px;
+}
+
 /* Footer */
 #hoduFooter {
     margin: 0 16.667%;
@@ -448,6 +493,26 @@ input::placeholder {
     }
     .submit-btn {
         align-self: flex-end;
+    }
+
+    /* modal */
+    .modal-container {
+        width: 300px;
+        height: 300px;
+        background: #F2E9D8 url(../img/modal-bg.png) no-repeat;
+        background-size: contain;
+    }
+    .modal-hodu-img {
+        width: 60px;
+        height: 62px;
+    }
+    .modal-txt01 {
+        margin: 24px 0 10px 0;
+        font-size: 1.5rem;
+    }
+    .modal-txt02 {
+        margin-bottom: 28px;
+        width: 199px;
     }
 
     /* Footer */
