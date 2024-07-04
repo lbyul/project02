@@ -142,6 +142,8 @@
 
 .sec03-container .sec03-img {
     display: flex;
+    justify-content: center;
+    white-space: nowrap;
 }
 .sec03-container .sec03-img img{
     border-radius: 30px;
@@ -363,10 +365,12 @@ input::placeholder {
     }
     .sec03-container .sec03-img {
         width: 100%;
+        overflow-x: auto;
         white-space: nowrap;
         -webkit-overflow-scrolling: touch;
         scrollbar-width: none;
         -ms-overflow-style: none;
+        justify-content: flex-start;
     }
     .sec03-container .sec03-img::-webkit-scrollbar {
         display: none;
