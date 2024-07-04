@@ -53,7 +53,8 @@
     color: var(--main-color);
     transition: all 0.1s linear;
 }
-.download-btn:hover {
+.download-btn:hover,
+.close-btn:hover {
     background-color: #fff;
 }
 .more-btn:hover,
